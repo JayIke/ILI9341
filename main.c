@@ -30,6 +30,15 @@
  */
 int main(void)
 {
+
+  spi_master_init();
+
+  uint8_t tx_data = 0;
+
+  uint8_t rx_data = 0;
+
+  sei();
+
   // init lcd
   ILI9341_Init();
 
@@ -45,6 +54,11 @@ int main(void)
   ILI9341_SetPosition(11, 25);  
   // draw string
   ILI9341_DrawString("ILI9341 LCD DRIVER", ILI9341_RED, X3);
+
+  while(1)
+  {
+    uart
+  }
 
   // EXIT
   // ------------------------------------------------- 

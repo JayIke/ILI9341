@@ -26,6 +26,21 @@
 
   // HARDWARE DEFINITION
   // 
+  // SPI
+  // ---------------------------------------------------------------
+  #define SPI_DDR     DDRB   // SPI Data Direction Register B
+  #define SPI_PORT    PORTB  // SPI Port Register (Output)
+  #define SPI_PORT    PINB   // SPI Pin Register(Input)
+  
+  #define SPI_CS      2      // Chip Select -> Active Low (enables slave to receive data)
+  #define SPI_MOSI    3      // SPI Data Out
+  #define SPI_MISO    4      // SPI Data In
+  #define SPI_SCK     5      // SPI Clock
+
+  #define DC          1      // Register Select -> Data/Command (NOT SPI)
+  #define ILI9341_CMD_MODE  0 // Command
+  #define ILI9341_DATA_MODE 1 // Data
+  // ---------------------------------------------------------------
   // Data
   // ---------------------------------------------------------------
   #define ILI9341_PORT_DATA     PORTD
